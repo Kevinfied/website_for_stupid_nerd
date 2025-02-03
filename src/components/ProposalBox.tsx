@@ -2,6 +2,8 @@ import React, { useState, useCallback } from "react";
 import { Button } from "./ui/button";
 import { Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import lipbiteEmoji from "../assets/lipbite.jpg";
+import heartEyesEmoji from "../assets/heart_eyes.jpg";
 
 interface Position {
   x: number;
@@ -68,9 +70,21 @@ const ProposalBox = ({
 
   return (
     <div className="relative w-[400px] h-[400px] bg-pink-100 rounded-xl shadow-lg p-6 flex flex-col items-center">
-      <h2 className="text-2xl font-bold text-pink-800 mb-8 text-center">
-        Will you be my valentine?
-      </h2>
+      <div className="flex items-center gap-2 mb-8">
+        <img
+          src={heartEyesEmoji}
+          alt="heart eyes emoji"
+          className="w-8 h-8 rounded-full"
+        />
+        <h2 className="text-2xl font-bold text-pink-800 text-center font-serif italic">
+          Hey beautiful, will you be my Valentine? ahaha
+        </h2>
+        <img
+          src={lipbiteEmoji}
+          alt="lipbite emoji"
+          className="w-8 h-8 rounded-full"
+        />
+      </div>
 
       {/* Static Yes buttons */}
       {yesButtons.map((pos, index) => (
